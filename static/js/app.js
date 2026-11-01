@@ -626,9 +626,10 @@ function renderRanking() {
   const missing = DATA.stations.length - ranked.length;
   $('#rank-list').innerHTML = ranked.map((w, i) => {
     const col = RATING_COLOR[w.rating]; const cf = CONF_META[w.confidence];
+    const exc = `${fmt(w.tests_failed, 0)} of ${fmt(w.tests_total, 0)} readings outside guidelines`;
     return `<div class="rank" data-sid="${w.station_id}">
       <span class="pos">${i + 1}</span>
-      <span class="rn">${w.station}<small>${w.rating} · <span style="color:${cf.color}">${cf.label}</span> · ${w.params_evaluated} of 8 · ${w.n_years} yr</small></span>
+      <span class="rn">${w.station}<small>${w.rating} · <span style="color:${cf.color}">${cf.label}</span> · ${exc}</small></span>
       <span class="rbar"><i style="width:${w.score}%;background:${col}"></i></span>
       <span class="rsc" style="color:${col}">${w.score}</span></div>`;
   }).join('') + (missing > 0 ? `<p class="hint">${missing} station(s) have no indicator data in ${winTxt} and are left out.</p>` : '');
