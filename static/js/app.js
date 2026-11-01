@@ -386,8 +386,7 @@ function buildRangeControl() {
 const VIEW_META = {
   trends:   { title: 'How an indicator changes over time', sub: 'Full measurement history with the long-term trend, health guidelines, and readings that crossed them — overlay a second station to compare.' },
   seasonal: { title: 'The river’s seasonal rhythm',        sub: 'Typical value by month with its range, so you can tell a normal seasonal swing from something unusual.' },
-  profile:  { title: 'From headwaters to the sea',          sub: 'How one indicator shifts downstream. Salt-driven measures rise at the estuary — that is the ocean, not pollution.' },
-  ranking:  { title: 'Which stretches are healthiest',      sub: 'One Water Quality Index per station over the chosen years, each weighted by how much data stands behind it.' },
+  profile: { title: 'From headwaters to the sea', sub: 'Explore how water-quality measurements vary along the LaHave River, from its freshwater headwaters to the coastal estuary.' },  ranking:  { title: 'Which stretches are healthiest',      sub: 'One Water Quality Index per station over the chosen years, each weighted by how much data stands behind it.' },
   signals:  { title: 'Readings worth a second look',        sub: 'Exceedances, unusual values, and expected natural conditions — kept honestly apart.' },
   quality:  { title: 'How we keep the numbers honest',      sub: 'What is set aside, what is measured, and why a merely-odd reading is never called a problem.' },
 };
